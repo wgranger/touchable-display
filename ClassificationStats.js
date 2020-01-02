@@ -5,7 +5,7 @@ import SeeMore from './SeeMore';
 
 const ClassificationStats = ({ classificationCount, height, width }) => {
   return (
-    <View style={{...styles.container, height, width, paddingTop: height / 3.5}}>
+    <View style={{...styles.container, height, width, justifyContent: 'center' }}>
       <Image style={{...styles.star}} source={require('./images/star.png')}/>
       <View style={{ position: 'absolute', bottom: 0, right: 0 }}>
         <Image source={require('./images/spiral.png')}/>
@@ -13,10 +13,10 @@ const ClassificationStats = ({ classificationCount, height, width }) => {
       <View>
         <Text style={[styles.header, { fontSize: height/30 }]}>ALL-TIME U!SCIENTIST CLASSIFICATIONS</Text>
       </View>
-      <View style={{ flex: 1, width: width * .8 }}>
-        <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.classificationCount, { flex: 1, fontSize: 500, width: '100%' }]}>{classificationCount.toLocaleString()}</Text>
+      <View >
+        <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.classificationCount, { fontSize: height / 3.5, width: width * 0.8 }]}>{classificationCount.toLocaleString()}</Text>
       </View>
-      <View style={{ marginBottom: 50 }}>
+      <View style={{ position: 'absolute', bottom: 0, marginBottom: 50 }}>
         <SeeMore height={height/5} width={width} />
       </View>
     </View>
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   header: {
     color: '#A3DDEE',
     fontFamily: 'Poppins',
-    textAlign: 'center'
   },
   classificationCount: {
     color: '#E5FF4D',
