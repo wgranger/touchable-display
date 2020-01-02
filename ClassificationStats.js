@@ -13,8 +13,8 @@ const ClassificationStats = ({ classificationCount, height, width }) => {
       <View>
         <Text style={[styles.header, { fontSize: height/30 }]}>ALL-TIME U!SCIENTIST CLASSIFICATIONS</Text>
       </View>
-      <View style={{ flex: 1 }}>
-        <Text style={[styles.classificationCount, { lineHeight: height/2.4,fontSize: height/3 }]}>{classificationCount.toLocaleString()}</Text>
+      <View style={{ flex: 1, width: width * .8 }}>
+        <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.classificationCount, { flex: 1, fontSize: 500, width: '100%' }]}>{classificationCount.toLocaleString()}</Text>
       </View>
       <View style={{ marginBottom: 50 }}>
         <SeeMore height={height/5} width={width} />
